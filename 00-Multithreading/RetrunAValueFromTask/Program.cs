@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RetrunAValueFromTask
@@ -15,6 +16,11 @@ namespace RetrunAValueFromTask
             
             Console.WriteLine("Hello World!");
             await DoWork();
+            Console.WriteLine("DoWork1");
+            await DoWork();
+            Console.WriteLine("DoWork2");
+
+            Thread.Sleep(5000);
         }
 
         #region

@@ -25,6 +25,11 @@ namespace async_await_keyword
             DoAsyncWork3.CalculateSumAsync(10, 11);
             //Do Other processing
             Thread.Sleep(200);
+            Console.ReadLine();
+            Console.WriteLine("1");
+            DoAsyncWork3.CalculateSumAsync(11, 12);
+            Console.ReadLine();
+
             Console.WriteLine("Program Exiting");
         }
     }
@@ -74,6 +79,8 @@ namespace async_await_keyword
 
         private static int GetSum(int i1, int i2)
         {
+            Thread.Sleep(5000);
+
             return i1 + i2;
         }
     }
